@@ -76,7 +76,7 @@ class ProductController {
             }
 
             if (value.categoryId) {
-                const category = await Category.findById(categoryId);
+                const category = await Category.findById(value.categoryId);
                 if (!category) return errorResponse(res, 'Category does not exist', 400);
             }
 
