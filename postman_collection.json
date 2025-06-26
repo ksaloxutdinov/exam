@@ -1,0 +1,1940 @@
+{
+	"info": {
+		"_postman_id": "e666c12c-71c1-45a6-ad1e-5de255391993",
+		"name": "exam",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44199702"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "crud",
+					"item": [
+						{
+							"name": "createAdmin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWJkODllNjRkYjIwOWViMDIxOTkxYiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlcmFkbWluIiwidmVyaWZpZWQiOnRydWUsImlhdCI6MTc1MDg2NTA3N30.tQIDdGmN3jGth01geylfBRDJd7cPQVL8byOdO6KPI9o",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"johndoe\",\n    \"email\": \"email@example.com\",\n    \"phone\": \"+998901234567\",\n    \"password\": \"HelloWorld1!\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/admin/create",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"admin",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllAdmins",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWJkODllNjRkYjIwOWViMDIxOTkxYiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlcmFkbWluIiwidmVyaWZpZWQiOnRydWUsImlhdCI6MTc1MDg2NjMyMH0.Bjz6Wo_X2w9oxE0xyTwxBtHrsb3D10i_cYfe6B3OixU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/admin/get-all",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"admin",
+										"get-all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAdminById",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWJlMDE1YTViMDJmN2Q4MDhiZDYzYSIsImVtYWlsIjoiZW1haWxAZXhhbXBsZS5jb20iLCJyb2xlIjoiYWRtaW4iLCJ2ZXJpZmllZCI6ZmFsc2UsImlhdCI6MTc1MDg2OTAyOX0.L3o-PTlzv5hzYzMG26ejho1deqcHGr6lkzjnMYaunPA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/admin/get-by-id?id=685be015a5b02f7d808bd63a",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"admin",
+										"get-by-id"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "685be015a5b02f7d808bd63a"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateAdmin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWJkODllNjRkYjIwOWViMDIxOTkxYiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlcmFkbWluIiwidmVyaWZpZWQiOnRydWUsImlhdCI6MTc1MDg2NjMyMH0.Bjz6Wo_X2w9oxE0xyTwxBtHrsb3D10i_cYfe6B3OixU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"janedoe\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/admin/update?id=685be015a5b02f7d808bd63a",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"admin",
+										"update"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "685be015a5b02f7d808bd63a"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteAdmin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWJkODllNjRkYjIwOWViMDIxOTkxYiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlcmFkbWluIiwidmVyaWZpZWQiOnRydWUsImlhdCI6MTc1MDg2NjMyMH0.Bjz6Wo_X2w9oxE0xyTwxBtHrsb3D10i_cYfe6B3OixU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:3000/api/admin/update?id=685be015a5b02f7d808bd63a",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"admin",
+										"update"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "685be015a5b02f7d808bd63a"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "authorization",
+					"item": [
+						{
+							"name": "signin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"shahmen\",\n    \"password\": \"HelloWorld1!\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/admin/signin",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"admin",
+										"signin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "confirmSignin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"shahmen\",\n    \"providedCode\": 524612\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/admin/confirm-signin",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"admin",
+										"confirm-signin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "signout",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:3000/api/admin/signout",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"admin",
+										"signout"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sendVerification",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWJkODllNjRkYjIwOWViMDIxOTkxYiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlcmFkbWluIiwidmVyaWZpZWQiOmZhbHNlLCJpYXQiOjE3NTA4NTk4Mjh9.vxPaio2jxqK5M_P9InqFiLy32VyGaj7fH7kR-EzzlEY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/admin/send-verification",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"admin",
+										"send-verification"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "checkVerification",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWJkODllNjRkYjIwOWViMDIxOTkxYiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlcmFkbWluIiwidmVyaWZpZWQiOmZhbHNlLCJpYXQiOjE3NTA4NTk4Mjh9.vxPaio2jxqK5M_P9InqFiLy32VyGaj7fH7kR-EzzlEY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"providedCode\": 856995\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/admin/check-verification",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"admin",
+										"check-verification"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "changePassword",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWJkODllNjRkYjIwOWViMDIxOTkxYiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlcmFkbWluIiwidmVyaWZpZWQiOmZhbHNlLCJpYXQiOjE3NTA4NTk4Mjh9.vxPaio2jxqK5M_P9InqFiLy32VyGaj7fH7kR-EzzlEY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"oldPassword\": \"HelloWorld1!\",\n    \"newPassword\": \"HelloWorld17!\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/admin/change-password",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"admin",
+										"change-password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sendForgotPassword",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"knizomiddinov17@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/admin/send-forgot-password-code",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"admin",
+										"send-forgot-password-code"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "checkForgotPassword",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"knizomiddinov17@gmail.com\",\n    \"providedCode\": 616238,\n    \"newPassword\": \"HelloWorld1!\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/admin/check-forgot-password-code",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"admin",
+										"check-forgot-password-code"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "salesman",
+			"item": [
+				{
+					"name": "crud",
+					"item": [
+						{
+							"name": "createSalesman",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"neogan\",\n    \"fullName\": \"John Doe\",\n    \"email\": \"knizomiddinov17@gmail.com\",\n    \"phone\": \"+998901234567\",\n    \"address\": \"Mustaqillik avenue, 15 ap.\",\n    \"password\": \"HelloWorld1!\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/salesman/create",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"salesman",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllSalesmen",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWJkODllNjRkYjIwOWViMDIxOTkxYiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlcmFkbWluIiwidmVyaWZpZWQiOnRydWUsImlhdCI6MTc1MDkyNzE4Mn0.Pa9YumbYbHbPQuj57ueUBzQ8UoyJpDfZJyAlutqms1M",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/salesman/get-all",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"salesman",
+										"get-all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getSalesmanById",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWNlY2EyMmUwZDk2NzU1YzljYjVhNiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJzYWxlc21hbiIsInZlcmlmaWVkIjpmYWxzZSwiaWF0IjoxNzUwOTIwNzYwfQ.ln1rFc8MGIhx63l9RyoUf0OwkGZMDaYD0IzXrunEwKA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/salesman/get-by-id?id=685ceca22e0d96755c9cb5a6",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"salesman",
+										"get-by-id"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "685ceca22e0d96755c9cb5a6"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateSalesman",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWQwZDY3YTE0MmNiNTYxY2VjNzM2ZiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJzYWxlc21hbiIsInZlcmlmaWVkIjpmYWxzZSwiaWF0IjoxNzUwOTI4ODYyfQ.QBrfhdvIzIl7MyM3eotfz8hfkX4saWuXr5zqMQh60kc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"neogan\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/salesman/update?id=685d0d67a142cb561cec736f",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"salesman",
+										"update"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "685d0d67a142cb561cec736f"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteSalesman",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWNlY2EyMmUwZDk2NzU1YzljYjVhNiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJzYWxlc21hbiIsInZlcmlmaWVkIjpmYWxzZSwiaWF0IjoxNzUwOTIwNzYwfQ.ln1rFc8MGIhx63l9RyoUf0OwkGZMDaYD0IzXrunEwKA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/salesman/delete?id=685ceca22e0d96755c9cb5a6",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"salesman",
+										"delete"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "685ceca22e0d96755c9cb5a6"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "authorization",
+					"item": [
+						{
+							"name": "signin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"neogan\",\n    \"password\": \"HelloWorld1!\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/salesman/signin",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"salesman",
+										"signin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "confirmSignin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"neogan\",\n    \"providedCode\": 537129\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/salesman/confirm-signin",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"salesman",
+										"confirm-signin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "signout",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/salesman/signout",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"salesman",
+										"signout"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sendVerification",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWNlY2EyMmUwZDk2NzU1YzljYjVhNiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJzYWxlc21hbiIsInZlcmlmaWVkIjpmYWxzZSwiaWF0IjoxNzUwOTIwNzYwfQ.ln1rFc8MGIhx63l9RyoUf0OwkGZMDaYD0IzXrunEwKA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/salesman/send-verification",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"salesman",
+										"send-verification"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "checkVerification",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWNlY2EyMmUwZDk2NzU1YzljYjVhNiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJzYWxlc21hbiIsInZlcmlmaWVkIjpmYWxzZSwiaWF0IjoxNzUwOTIwNzYwfQ.ln1rFc8MGIhx63l9RyoUf0OwkGZMDaYD0IzXrunEwKA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"providedCode\": 504908\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/salesman/check-verification",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"salesman",
+										"check-verification"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "changePassword",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWNlY2EyMmUwZDk2NzU1YzljYjVhNiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJzYWxlc21hbiIsInZlcmlmaWVkIjpmYWxzZSwiaWF0IjoxNzUwOTIwNzYwfQ.ln1rFc8MGIhx63l9RyoUf0OwkGZMDaYD0IzXrunEwKA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"oldPassword\": \"HelloWorld17!\",\n    \"newPassword\": \"HelloWorld1!\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/admin/change-password",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"admin",
+										"change-password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sendForgotPassword",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"knizomiddinov17@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/admin/send-forgot-password-code",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"admin",
+										"send-forgot-password-code"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "checkForgotPassword",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"knizomiddinov17@gmail.com\",\n    \"providedCode\": 725930,\n    \"newPassword\": \"HelloWorld1!\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/admin/check-forgot-password-code",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"admin",
+										"check-forgot-password-code"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "client",
+			"item": [
+				{
+					"name": "crud",
+					"item": [
+						{
+							"name": "getAllClients",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWJkODllNjRkYjIwOWViMDIxOTkxYiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlcmFkbWluIiwidmVyaWZpZWQiOnRydWUsImlhdCI6MTc1MDkzMzc3M30.3Kb_teU7A1SN--qrYU1PQKfvfI0_T6eeVuhQkiWFqG8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/client/get-all",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"client",
+										"get-all"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getClientById",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWJkODllNjRkYjIwOWViMDIxOTkxYiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlcmFkbWluIiwidmVyaWZpZWQiOnRydWUsImlhdCI6MTc1MDkzMzc3M30.3Kb_teU7A1SN--qrYU1PQKfvfI0_T6eeVuhQkiWFqG8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/client/get-by-id?id=685d18a099c81009d0019c50",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"client",
+										"get-by-id"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "685d18a099c81009d0019c50"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateClient",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWJkODllNjRkYjIwOWViMDIxOTkxYiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlcmFkbWluIiwidmVyaWZpZWQiOnRydWUsImlhdCI6MTc1MDkzMzc3M30.3Kb_teU7A1SN--qrYU1PQKfvfI0_T6eeVuhQkiWFqG8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"cracker\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/client/update?id=685d18a099c81009d0019c50",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"client",
+										"update"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "685d18a099c81009d0019c50"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteClient",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWJkODllNjRkYjIwOWViMDIxOTkxYiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlcmFkbWluIiwidmVyaWZpZWQiOnRydWUsImlhdCI6MTc1MDkzMzc3M30.3Kb_teU7A1SN--qrYU1PQKfvfI0_T6eeVuhQkiWFqG8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/client/delete?id=685d189399c81009d0019c4b",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"client",
+										"delete"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "685d189399c81009d0019c4b"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "authorization",
+					"item": [
+						{
+							"name": "signup",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"cracker\",\n    \"fullName\": \"John Doe\",\n    \"email\": \"knizomiddinov17@gmail.com\",\n    \"phone\": \"+998901234567\",\n    \"address\": \"Musta ave\",\n    \"password\": \"HelloWorld1!\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/client/signup",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"client",
+										"signup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "signin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"cracker\",\n    \"password\": \"HelloWorld1!\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/client/signin",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"client",
+										"signin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "confirmSignin",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"cracker\",\n    \"providedCode\": 41508\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/client/confirm-signin",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"client",
+										"confirm-signin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "signout",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWQxODkzOTljODEwMDlkMDAxOWM0YiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJjbGllbnQiLCJ2ZXJpZmllZCI6ZmFsc2UsImlhdCI6MTc1MDkzMjk0Nn0.atdU7KvzpcTLsWnTGR8xDzRK9b-tVQ4OGrQfuNuN72E",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/client/signout",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"client",
+										"signout"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sendVerification",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWQxODkzOTljODEwMDlkMDAxOWM0YiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJjbGllbnQiLCJ2ZXJpZmllZCI6ZmFsc2UsImlhdCI6MTc1MDkzMjk0Nn0.atdU7KvzpcTLsWnTGR8xDzRK9b-tVQ4OGrQfuNuN72E",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/client/send-verification",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"client",
+										"send-verification"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "checkVerification",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWQxODkzOTljODEwMDlkMDAxOWM0YiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJjbGllbnQiLCJ2ZXJpZmllZCI6ZmFsc2UsImlhdCI6MTc1MDkzMjk0Nn0.atdU7KvzpcTLsWnTGR8xDzRK9b-tVQ4OGrQfuNuN72E",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"providedCode\": 902070\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/client/check-verification",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"client",
+										"check-verification"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "changePassword",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWQxODkzOTljODEwMDlkMDAxOWM0YiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJjbGllbnQiLCJ2ZXJpZmllZCI6ZmFsc2UsImlhdCI6MTc1MDkzMjk0Nn0.atdU7KvzpcTLsWnTGR8xDzRK9b-tVQ4OGrQfuNuN72E",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"oldPassword\": \"HelloWorld17!\",\n    \"newPassword\": \"HelloWorld1!\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/client/change-password",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"client",
+										"change-password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "sendForgotPassword",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"knizomiddinov17@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/client/send-forgot-password-code",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"client",
+										"send-forgot-password-code"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "checkForgotPasswordCode",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"knizomiddinov17@gmail.com\",\n    \"providedCode\": 178883,\n    \"newPassword\": \"HelloWorld1!\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/api/client/check-forgot-password-code",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"client",
+										"check-forgot-password-code"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "createCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWJkODllNjRkYjIwOWViMDIxOTkxYiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlcmFkbWluIiwidmVyaWZpZWQiOnRydWUsImlhdCI6MTc1MDkzNjQ4Mn0.KmkVZvg_-j1qP_x-ZG_8JmcMuyYhVlYw3ffa6Pk78KI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Laptop\",\n    \"description\": \"Apple Macbook Laptops\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/category/create",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllCategories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWJkODllNjRkYjIwOWViMDIxOTkxYiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlcmFkbWluIiwidmVyaWZpZWQiOnRydWUsImlhdCI6MTc1MDkzNjQ4Mn0.KmkVZvg_-j1qP_x-ZG_8JmcMuyYhVlYw3ffa6Pk78KI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/category/get-all",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category",
+								"get-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCategoryById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWJkODllNjRkYjIwOWViMDIxOTkxYiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlcmFkbWluIiwidmVyaWZpZWQiOnRydWUsImlhdCI6MTc1MDkzNjQ4Mn0.KmkVZvg_-j1qP_x-ZG_8JmcMuyYhVlYw3ffa6Pk78KI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/category/get-by-id?id=685d2bb25f0ddbfab8396e74",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category",
+								"get-by-id"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "685d2bb25f0ddbfab8396e74"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWJkODllNjRkYjIwOWViMDIxOTkxYiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlcmFkbWluIiwidmVyaWZpZWQiOnRydWUsImlhdCI6MTc1MDkzNjQ4Mn0.KmkVZvg_-j1qP_x-ZG_8JmcMuyYhVlYw3ffa6Pk78KI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Apple Laptop\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/category/update?id=685d2bb25f0ddbfab8396e74",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category",
+								"update"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "685d2bb25f0ddbfab8396e74"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWJkODllNjRkYjIwOWViMDIxOTkxYiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlcmFkbWluIiwidmVyaWZpZWQiOnRydWUsImlhdCI6MTc1MDkzNjQ4Mn0.KmkVZvg_-j1qP_x-ZG_8JmcMuyYhVlYw3ffa6Pk78KI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/category/delete?id=685d2bb25f0ddbfab8396e74",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"category",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "685d2bb25f0ddbfab8396e74"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "createProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWJkODllNjRkYjIwOWViMDIxOTkxYiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlcmFkbWluIiwidmVyaWZpZWQiOnRydWUsImlhdCI6MTc1MDkzNjQ4Mn0.KmkVZvg_-j1qP_x-ZG_8JmcMuyYhVlYw3ffa6Pk78KI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Laptop\",\n    \"description\": \"Apple Macbook Laptops\",\n    \"price\": 1000,\n    \"quantity\": 100,\n    \"color\": \"grey\",\n    \"categoryId\": \"685d32ea1455524f8378b203\",\n    \"salesmanId\": \"685d0d67a142cb561cec736f\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/product/create",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllProducts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWJkODllNjRkYjIwOWViMDIxOTkxYiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlcmFkbWluIiwidmVyaWZpZWQiOnRydWUsImlhdCI6MTc1MDkzNjQ4Mn0.KmkVZvg_-j1qP_x-ZG_8JmcMuyYhVlYw3ffa6Pk78KI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/product/get-all",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								"get-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProductById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWJkODllNjRkYjIwOWViMDIxOTkxYiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlcmFkbWluIiwidmVyaWZpZWQiOnRydWUsImlhdCI6MTc1MDkzNjQ4Mn0.KmkVZvg_-j1qP_x-ZG_8JmcMuyYhVlYw3ffa6Pk78KI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/product/get-by-id?id=685d3446a4340bcdaade4ccd",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								"get-by-id"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "685d3446a4340bcdaade4ccd"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWJkODllNjRkYjIwOWViMDIxOTkxYiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlcmFkbWluIiwidmVyaWZpZWQiOnRydWUsImlhdCI6MTc1MDkzNjQ4Mn0.KmkVZvg_-j1qP_x-ZG_8JmcMuyYhVlYw3ffa6Pk78KI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Macbook pro\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/product/update?id=685d3446a4340bcdaade4ccd",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								"update"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "685d3446a4340bcdaade4ccd"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWJkODllNjRkYjIwOWViMDIxOTkxYiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlcmFkbWluIiwidmVyaWZpZWQiOnRydWUsImlhdCI6MTc1MDkzNjQ4Mn0.KmkVZvg_-j1qP_x-ZG_8JmcMuyYhVlYw3ffa6Pk78KI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/product/delete?id=685d3446a4340bcdaade4ccd",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "685d3446a4340bcdaade4ccd"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sold-product",
+			"item": [
+				{
+					"name": "createSoldProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWJkODllNjRkYjIwOWViMDIxOTkxYiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlcmFkbWluIiwidmVyaWZpZWQiOnRydWUsImlhdCI6MTc1MDkzNjQ4Mn0.KmkVZvg_-j1qP_x-ZG_8JmcMuyYhVlYw3ffa6Pk78KI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quantity\": 100,\n    \"clientId\": \"685d189399c81009d0019c4b\",\n    \"productId\": \"685d3453a4340bcdaade4cd0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/sold-product/create",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"sold-product",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllSoldProducts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWJkODllNjRkYjIwOWViMDIxOTkxYiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlcmFkbWluIiwidmVyaWZpZWQiOnRydWUsImlhdCI6MTc1MDkzNjQ4Mn0.KmkVZvg_-j1qP_x-ZG_8JmcMuyYhVlYw3ffa6Pk78KI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/sold-product/get-all",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"sold-product",
+								"get-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSoldProductById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWJkODllNjRkYjIwOWViMDIxOTkxYiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlcmFkbWluIiwidmVyaWZpZWQiOnRydWUsImlhdCI6MTc1MDkzNjQ4Mn0.KmkVZvg_-j1qP_x-ZG_8JmcMuyYhVlYw3ffa6Pk78KI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/sold-product/get-by-id?id=685d3d27a149577dd7f4104e",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"sold-product",
+								"get-by-id"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "685d3d27a149577dd7f4104e"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateSoldProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWJkODllNjRkYjIwOWViMDIxOTkxYiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlcmFkbWluIiwidmVyaWZpZWQiOnRydWUsImlhdCI6MTc1MDkzNjQ4Mn0.KmkVZvg_-j1qP_x-ZG_8JmcMuyYhVlYw3ffa6Pk78KI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"quantity\": \"50\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/sold-product/update?id=685d3d27a149577dd7f4104e",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"sold-product",
+								"update"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "685d3d27a149577dd7f4104e"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteSoldProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4NWJkODllNjRkYjIwOWViMDIxOTkxYiIsImVtYWlsIjoia25pem9taWRkaW5vdjE3QGdtYWlsLmNvbSIsInJvbGUiOiJzdXBlcmFkbWluIiwidmVyaWZpZWQiOnRydWUsImlhdCI6MTc1MDkzNjQ4Mn0.KmkVZvg_-j1qP_x-ZG_8JmcMuyYhVlYw3ffa6Pk78KI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/sold-product/delete?id=685d3446a4340bcdaade4ccd",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"sold-product",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "685d3446a4340bcdaade4ccd"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
