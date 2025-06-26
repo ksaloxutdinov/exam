@@ -21,7 +21,7 @@ const createSuperadmin = async () => {
             role: 'superadmin',
             password: config.SUPERADMIN_PASSWORD
         }
-        const { value, error } = validator.createAdminValidator(newSuperadmin);
+        const { value, error } = validator.createValidator(newSuperadmin);
         if (error) throw new Error(error);
         const hashedPassword = await crypto.encrypt(value.password);
         await Admin.create({
