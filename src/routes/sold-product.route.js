@@ -10,8 +10,8 @@ const router = Router();
 router
     //CRUD
     .post('/create', AuthGuard, RoleGuard(['superadmin', 'admin', 'salesman']), controller.createSoldProduct)
-    .get('/get-all', controller.getAllSoldProducts)
-    .get('/get-by-id', controller.getSoldProductById)
+    .get('/get-all', AuthGuard, RoleGuard('salesman'), controller.getAllSoldProducts)
+    .get('/get-by-id', AuthGuard, RoleGuard('salesman'), controller.getSoldProductById)
     .patch('/update', AuthGuard, RoleGuard(['superadmin', 'admin', 'salesman']), controller.updateSoldProduct)
     .delete('/delete', AuthGuard, RoleGuard(['superadmin', 'admin', 'salesman']), controller.deleteSoldProduct);
 
